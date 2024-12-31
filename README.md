@@ -1,4 +1,5 @@
 1.Project name?
+
 Answer:The project name is PeddyPal, emphasizing the idea of a friendly companion for pet adoption. It conveys warmth and connection, perfect for a platform dedicated to bringing families and pets together.
 
 2.Short description of the project.
