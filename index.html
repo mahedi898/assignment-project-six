@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy || Home</title>
+    <link rel="icon" href="images/logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- header nav -->
+
+        <nav>
+            <div class="navbar bg-base-100 px-7">
+                <div class="navbar-start gap-2">
+                    <img class="w-6" src="images/logo.webp " alt="">
+                    <h1 class="text-2xl font-extrabold">Peddy</h1>
+                </div>
+                <div class="navbar-center gap-5">
+                    <button class=" font-bold">Home</button>
+                    <button class=" font-bold">Blog</button>
+                    <button class=" font-bold">Contact</button>
+                </div>
+                <div class="navbar-end">
+                    <img class="w-6" src="images/user.png" alt="">
+                </div>
+            </div>
+        </nav>
+
+        <!-- header main section -->
+
+        <section>
+            <div class="hero">
+                <div class="hero-content text-center">
+                    <div class="max-w-xl">
+                        <p class="py-6 font-bold text-gray-400">
+                            Bringing Families Together ❤️‍🔥
+                        </p>
+                        <h1 class="text-5xl font-bold">Your Path to Adoption Starts Here</h1>
+                        <p class="py-6 text-sm">
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                        </p>
+                        <a href="#showMain" class="btn bg-[#0E7A81] text-white">View More</a>
+                    </div>
+                </div>
+            </div>
+            <img style="margin: auto;" class="w-[650px]" src="images/pet.webp" alt="">
+            <div class="hero mt-24">
+                <div class="hero-content text-center">
+                    <div class="max-w-xl">
+                        <h1 class="text-4xl font-bold">Adopt Your Best Friend</h1>
+                        <p class="py-6 text-sm">
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="category" class="p-2 flex justify-around ">
+
+        </div>
+
+    </header>
+
+    <main id="showMain">
+
+        <!-- sort by price section  -->
+        <section class="flex justify-between px-28 mt-9">
+            <div class="text-xl font-bold">Best Deal For you</div>
+            <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+        </section>
+
+        <div id="loadingSpinner"class="w-12 h-12 justify-center items-center mx-auto hidden">
+            <span class="loading loading-spinner loading-lg"></span>
+        </div>
+
+
+        <div class="flex mt-12 w-[90%] mx-auto gap-5 ">
+            <!-- show all card section  -->
+            <section id="all-card" class="w-[80%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-3"></section>
+            <!-- img history section -->
+            <section id="card-img"
+                class="w-[20%] max-h-[1096px] p-2 pt-6 border-[1px] border-gray-400 shadow-xl rounded-lg"></section>
+        </div>
+        <!-- modal section -->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button id="showModal" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+        <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-content">
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-outline btn-success">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <div>
+             <!-- Open the modal using ID.showModal() method -->
+        <button id="showModalAdopt" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+        <div id="customModalAdopt" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                    <p id="countdownText">0</p>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="footer flex bg-black text-base-content text-white p-20 mt-16 justify-around">
+        <nav>
+            <h6 class="text-xl font-bold flex gap-3"><img src="images/logo.webp" alt="">Peddy</h6>
+            <p class="mt-5">
+                Location: av. Washington 165, NY CA
+                <br> <br> 54003
+                <br> <br> Phone: +31 85 964 47 25
+                <br> <br> Email: info@yourdomain.com
+                <br> <br> Openings hours: 9.00 AM - 5.00 PM
+            </p>
+        </nav>
+        <nav>
+            <h6 class="text-xl font-bold flex gap-3">Useful Links</h6>
+            <a class="text-gray-400">About us</a>
+            <a class="text-gray-400">Contact</a>
+            <a class="text-gray-400">Jobs</a>
+            <a class="text-gray-400">Press kit</a>
+        </nav>
+        <form>
+            <h6 class="text-xl font-bold flex gap-3">Drop a Message</h6>
+            <fieldset class="form-control w-80">
+                <label class="label">
+                    <span class="label-text text-gray-400">Enter your email address</span>
+                </label>
+                <div class="join">
+                    <input type="text" placeholder="username@site.com"
+                        class="input input-bordered join-item text-black" />
+                    <button class="btn btn-primary join-item">Subscribe</button>
+                </div>
+            </fieldset>
+        </form>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
